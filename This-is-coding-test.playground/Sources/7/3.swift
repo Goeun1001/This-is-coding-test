@@ -6,7 +6,7 @@ func binarySearch(array: inout [Int], target: Int, start: Int, end: Int) -> Int?
     var end = end
     
     while start <= end {
-        let mid = (start + end) // 2
+        let mid = (start + end) / 2
         if array[mid] == target {
             return mid
         } else if array[mid] > target {
