@@ -2,12 +2,18 @@ import Foundation
 
 // 책 풀이
 // 도시의 개수, 도로의 개수, 거리 정보, 출발 도시 번호
-//n, m, k, x = map(int, input().split())
-let n = 4
-let m = 4
-let k = 2
-let x = 1
-let graph = [[], [2, 3], [3, 4], [], []]
+let arr = readLine()!.split(separator: " ").map { Int($0)! }
+let n = arr[0]
+let m = arr[1]
+let k = arr[2]
+let x = arr[3]
+
+var graph = Array(repeating: [Int](), count: n + 1)
+
+for _ in 0..<m {
+    let arr = readLine()!.split(separator: " ").map { Int($0)! }
+    graph[arr[0]].append(arr[1])
+}
 
 // 모든 도시에 대한 최단 거리 초기화
 var distance = Array(repeating: -1, count: n + 1)
@@ -40,4 +46,4 @@ if check == false {
     print(-1)
 }
 
-print(distance)
+//print(distance)

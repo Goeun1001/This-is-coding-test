@@ -1,6 +1,5 @@
 import Foundation
 
-// 내 풀이.. 또 없다
 // 책 풀이
 let n = 5
 var data = [3, 2, 1, 1, 9]

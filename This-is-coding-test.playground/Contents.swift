@@ -1,26 +1,7 @@
 import Foundation
 
-let a = Int(readLine()!)!
-let b = Int(readLine()!)!
-let c = Int(readLine()!)!
-let d = Int(readLine()!)!
-let e = Int(readLine()!)!
+// 가장 싼 곳을 찾은 후 현재 위치에서 거기까지 가는 데에 얼마나 걸리는지 찾아서 구매
 
-let average = (Double(a) + Double(b) + Double(c) + Double(d) + Double(e)) / 5.0
-print(trunc(average))
-
-func customPrint(number: Int) {
-    if 0 <= number && number <= 10 {
-        print(number, "프로그래밍 기초반")
-    } else if 10 < number && number < 45 {
-        print(number, "프로그래밍반")
-    } else {
-        print(number, "다른 방과후 수업")
-    }
-}
-
-customPrint(number: a)
-customPrint(number: b)
-customPrint(number: c)
-customPrint(number: d)
-customPrint(number: e)
+var result = 0
+let N = Int(readLine()!)!
+let road = readLine()!.map { Int($0)! }
