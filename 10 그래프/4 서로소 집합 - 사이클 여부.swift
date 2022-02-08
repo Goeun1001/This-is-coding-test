@@ -34,16 +34,15 @@ var cycle = false // 사이클 발생 여부
 // Union 연산을 각각 수행
 let union = [[1, 2], [1, 3], [2, 3]]
 
-for _ in 0...e - 1 {
-    for u in union {
-        // 사이클이 발생한 경우 종료
-        if findParent(parent: &parent, x: u[0]) == findParent(parent: &parent, x: u[1]) {
-            cycle = true
-            break
-        } else {
-            // 사이클이 발생하지 않았다면 합집합(Union) 연산 수행
-            union(parent: &parent, a: u[0], b: u[1])
-        }
+for i in 0...e - 1 {
+    let u = union[i]
+    // 사이클이 발생한 경우 종료
+    if findParent(parent: &parent, x: u[0]) == findParent(parent: &parent, x: u[1]) {
+        cycle = true
+        break
+    } else {
+        // 사이클이 발생하지 않았다면 합집합(Union) 연산 수행
+        union(parent: &parent, a: u[0], b: u[1])
     }
 }
 
